@@ -5,33 +5,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bg_color"
+    tools:context=".LeaderboardFragment"
+    tools:ignore="ExtraText">
 
-    tools:context=".LeaderboardFragment">
-
-
+    <!-- Top Background View -->
     <View
         android:id="@+id/view2"
         android:layout_width="wrap_content"
         android:layout_height="150dp"
         android:background="@drawable/top_background"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent" />
 
-    </View>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-       android:layout_marginTop="8dp"
-        android:background="@color/bg_color"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view2" />
-
+    <!-- Leaderboard Title (TextView) with constraints -->
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
@@ -39,12 +25,51 @@
         android:text="LeaderBoard"
         android:textStyle="bold"
         android:textColor="@color/txt_color2"
-        android:textSize="40dp"
-        android:fontFamily="@font/aladin"
-        app:layout_constraintBottom_toBottomOf="@+id/view2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/view2"
-        app:layout_constraintTop_toTopOf="@+id/view2" />
+        android:textSize="32sp"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />  <!-- Added horizontal constraints -->
+        app:layout_constraintEnd_toEndOf="parent"  <!-- Added horizontal constraints -->
+        app:layout_constraintBottom_toTopOf="@+id/recyclerView"  <!-- Constrained above RecyclerView -->
+        app:layout_constraintTop_toBottomOf="@+id/view2" />  <!-- Constrained below top background -->
 
+    <!-- RecyclerView for displaying leaderboard -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/bg_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" /> <!-- Constrained below the leaderboard title -->
+
+    <!-- Progress Bar for loading state -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:indeterminate="true"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Empty State TextView (optional) -->
+    <TextView
+        android:id="@+id/emptyStateText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No leaderboard data available"
+        android:textColor="@color/txt_color2"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

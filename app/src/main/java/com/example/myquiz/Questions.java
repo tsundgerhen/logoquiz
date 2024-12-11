@@ -1,13 +1,19 @@
 package com.example.myquiz;
 
 public class Questions {
-    private  String question, opt1, opt2, opt3, opt4, ans;
+    private String logoUrl;
+    private String opt1;
+    private String opt2;
+    private String opt3;
+    private String opt4;
+    private String ans;
 
-    public Questions(){
+    // Default constructor (required for Firebase)
+    public Questions() {}
 
-    }
-    public Questions(String question, String opt1, String opt2, String opt3, String opt4, String ans) {
-        this.question = question;
+    // Constructor
+    public Questions(String logoUrl, String opt1, String opt2, String opt3, String opt4, String ans) {
+        this.logoUrl = logoUrl;
         this.opt1 = opt1;
         this.opt2 = opt2;
         this.opt3 = opt3;
@@ -15,12 +21,13 @@ public class Questions {
         this.ans = ans;
     }
 
-    public String getQuestion() {
-        return question;
+    // Getters and Setters
+    public String getLogoUrl() {
+        return logoUrl;
     }
 
-    public void setQuestion(String question) {
-        this.question = question;
+    public void setLogoUrl(String logoUrl) {
+        this.logoUrl = logoUrl;
     }
 
     public String getOpt1() {

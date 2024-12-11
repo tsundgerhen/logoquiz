@@ -1,29 +1,30 @@
 package com.example.myquiz;
 
 public class CategoryModel {
+    private String categoryId;
+    private String categoryName;
+    private String categoryImage;
 
-    private  String categoryId, categoryName,categoryImage;
+    // Default constructor required for Firebase
+    public CategoryModel() {}
 
-    public CategoryModel(String categoryId, String categoryName, String categoryImage) {
-        this.categoryId = categoryId;
+    // Constructor
+    public CategoryModel(String categoryName, String categoryImage) {
         this.categoryName = categoryName;
         this.categoryImage = categoryImage;
     }
 
-    //empty constructor
-    public CategoryModel(){
-
-    }
-    public String getCategoryId() {
-        return categoryId;
+    // Getters and setters
+    public String getCategoryName() {
+        return categoryName;
     }
 
     public void setCategoryId(String categoryId) {
         this.categoryId = categoryId;
     }
 
-    public String getCategoryName() {
-        return categoryName;
+    public String getCategoryId() {
+        return categoryId;
     }
 
     public void setCategoryName(String categoryName) {
@@ -37,6 +38,4 @@ public class CategoryModel {
     public void setCategoryImage(String categoryImage) {
         this.categoryImage = categoryImage;
     }
-
-
 }

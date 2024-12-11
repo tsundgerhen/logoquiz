@@ -5,33 +5,31 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bg_color"
-
     tools:context=".MainActivity">
 
-
+    <!-- Top Background View -->
     <View
         android:id="@+id/view2"
         android:layout_width="wrap_content"
         android:layout_height="170dp"
-             android:background="@drawable/top_background"
+        android:background="@drawable/top_background"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent" />
 
-    </View>
-
+    <!-- RecyclerView for Categories -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/categoryList"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-       android:layout_marginLeft="8dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
-
         android:background="@color/bg_color"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view2" />
 
+    <!-- User Name TextView -->
     <TextView
         android:id="@+id/userName"
         android:layout_width="wrap_content"
@@ -45,18 +43,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/letsPlay"
+    <!-- Start Quiz Button (Changed to Button) -->
+    <Button
+        android:id="@+id/startQuizBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
         android:fontFamily="@font/aladin"
-        android:text="Lets Play"
+        android:text="Let's Play"
         android:textColor="@color/txt_color2"
         android:textSize="24sp"
-        android:layout_marginTop="4dp"
-        app:layout_constraintStart_toStartOf="@+id/userName"
-        app:layout_constraintTop_toBottomOf="@+id/userName" />
+        app:layout_constraintStart_toStartOf="@id/userName"
+        app:layout_constraintTop_toBottomOf="@id/userName" />
 
+    <!-- User Image -->
     <ImageView
         android:id="@+id/userImg"
         android:layout_width="60dp"
@@ -65,12 +65,10 @@
         android:layout_marginEnd="36dp"
         android:padding="8dp"
         android:background="@drawable/profile_bg"
-        app:layout_constraintBottom_toBottomOf="@+id/view2"
-        app:layout_constraintEnd_toEndOf="@+id/view2"
+        app:layout_constraintBottom_toBottomOf="@id/view2"
+        app:layout_constraintEnd_toEndOf="@id/view2"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.13"
         app:srcCompat="@drawable/user" />
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

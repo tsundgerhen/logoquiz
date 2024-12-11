@@ -1,36 +1,65 @@
 {
   "project_info": {
-    "project_number": "517187073718",
-    "project_id": "my-quiz-8b608",
-    "storage_bucket": "my-quiz-8b608.appspot.com"
+    "project_number": "769891771041",
+    "firebase_url": "https://csm317-bd-default-rtdb.firebaseio.com",
+    "project_id": "csm317-bd",
+    "storage_bucket": "csm317-bd.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:517187073718:android:3704fd4c4f307bcc489817",
+        "mobilesdk_app_id": "1:769891771041:android:ddb2e02c01bb2cbf7a06e0",
         "android_client_info": {
-          "package_name": "com.example.myquiz"
+          "package_name": "com.example.bd"
         }
       },
-      "oauth_client": [
-        {
-          "client_id": "517187073718-m4v6r3fhql231qvsk2cen3vamnpq697r.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
+      "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyBnNNivbsVSNEq8dklxw7MoTTWCBDz4r0c"
+          "current_key": "AIzaSyC6IUFEK0Us1VKw57VGBXSsQW20qWsYyVw"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "517187073718-m4v6r3fhql231qvsk2cen3vamnpq697r.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:769891771041:android:d44d862377ca39307a06e0",
+        "android_client_info": {
+          "package_name": "com.example.biydaalt"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC6IUFEK0Us1VKw57VGBXSsQW20qWsYyVw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:769891771041:android:a731b3b50486defc7a06e0",
+        "android_client_info": {
+          "package_name": "com.example.myquiz"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC6IUFEK0Us1VKw57VGBXSsQW20qWsYyVw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
         }
       }
     }
